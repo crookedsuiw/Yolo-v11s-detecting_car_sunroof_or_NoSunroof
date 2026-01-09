@@ -1,4 +1,5 @@
-dir = ''
+# script to view number of instances of each class
+# ideally you want each classes to have around the same number of instances
 
 import os
 from collections import Counter
