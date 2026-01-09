@@ -1,6 +1,9 @@
 from ultralytics import YOLO
 model = YOLO('yolo11s.pt')
 
+#REMEMBER to remove lebels.cache from train and val directories before every training
+
+
 model.train(
     data = 'custom_dataset.yaml',
     imgsz = 640,
