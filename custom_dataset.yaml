@@ -1,0 +1,6 @@
+train: C:\Users\asimm\OneDrive\Desktop\SunYesNo\train
+val: C:\Users\asimm\OneDrive\Desktop\SunYesNo\val
+
+nc: 2
+
+names: ["NotSunroof", "Sunroof"]
