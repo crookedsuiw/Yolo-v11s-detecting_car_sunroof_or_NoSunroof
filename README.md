@@ -1,15 +1,15 @@
 #YOLOv11s to detect moving traffic cars with and without sunroof along with dataset.
 
-This project utilizes ultralytics <a href = 'https://docs.ultralytics.com/tasks/detect/#models'>YOLOv11s</a> model to train a custom data set of moving traffic CARS with sunroof and without sunroof to detect and classify them. that is split 90:10 into train and val sets. train dataset with 161 images and val dataset with 18 images with a total of 487 instances split between ['Sunroof', 'NotSunroof'] classes.
+This project utilizes ultralytics <a href = 'https://docs.ultralytics.com/tasks/detect/#models'>YOLOv11s</a> model (Now named YOLO26s) to train a custom data set of moving traffic CARS with sunroof and without sunroof to detect and classify them. that is split 90:10 into train and val sets. train dataset with 161 images and val dataset with 18 images with a total of 487 instances split between ['Sunroof', 'NotSunroof'] classes.
 
 <img src= 'runs\detect\train\labels.jpg' alt = 'Labels Picture' width = 600/>
 
 The dataset is labelled using <a href = 'https://labelstud.io/'>Label-Studio</a>, an Open Source labeling platform.
-The model is specifically trained on CARS (no trucks, pick-up or bikes are detected) moving left to right, this means cars moving opposite lane are not detected.Flip video feed horizontally before feeding for countries with right-hand drive.
+The model is feature-engineered to be trained on CARS (no trucks, pick-up or bikes are detected) moving left to right, this means cars moving opposite lane are not detected.Flip video feed horizontally before feeding for countries with right-hand drive.
 
 <img src= 'runs\detect\predict15\1df405d8-20260108_111858.jpg' alt = 'Example Result'/>
 
-Trained on CPU (~3hrs),I was able to reach validation mAP50-95 score of 85.4% with precision and recall of over 0.9.
+Trained on CPU (~3hrs),I was able to reach validation mAP50-95 score of 85.4% with a precision and recall of over 0.9.
 <img src= 'runs\detect\train\BoxP_curve.png' alt = 'Precission Curve' width = 400/>
 <img src= 'runs\detect\train\BoxR_curve.png' alt = 'Recall Curve' width = 400/>
 
